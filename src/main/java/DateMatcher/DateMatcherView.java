@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * TODO: comments
+ * TODO: Proper string token parsing
+ * TODO: Error handling?
+ */
 public class DateMatcherView {
 
     private Scanner sc;
@@ -19,9 +24,9 @@ public class DateMatcherView {
 
         System.out.println("\nThis program matches students to each other for speed dates");
         System.out.println("\nHow many students would you like to match?");
-        numberOfStudents = sc.nextInt();
+        numberOfStudents = Integer.parseInt(sc.nextLine());
 
-        MatchList dateMatches = new MatchList(collectStudentNames(numberOfStudents, sc));
+        SpeedDateList dateMatches = new SpeedDateList(collectStudentNames(numberOfStudents, sc));
 
         System.out.println(dateMatches);
 

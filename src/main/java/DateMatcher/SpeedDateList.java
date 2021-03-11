@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * This DateMatcher class matches students into pairs for speed dating. All pairs are unique
  */
-public class MatchList {
+public class SpeedDateList {
 
     /**
      * This list contains all speedDates that are valid matched and unique in pairing
@@ -17,7 +17,7 @@ public class MatchList {
      * The constructor of this class. It creates a list of matched speed dates upon creation of a DateMatcher object
      * @param studentList : A List of Student objects
      */
-    public MatchList(List<Student> studentList) {
+    public SpeedDateList(List<Student> studentList) {
         this.matchedSpeedDates = new ArrayList<>();
         matchPairs(studentList);
     }
