@@ -1,4 +1,4 @@
-package DateMactcher;
+package DateMatcher;
 
 /**
  * This class represents a SpeedDate between two students
@@ -27,17 +27,6 @@ public class SpeedDate {
     }
 
     /**
-     * This method creates a new SpeedDate object with reversed pair values
-     * @return
-     */
-/*    public SpeedDate reversePair() {
-
-        SpeedDate reversed = new SpeedDate(this.getPair()[1], this.getPair()[0]);
-
-        return reversed;
-    }*/
-
-    /**
      * This method checks whether the 2 participants in this speed date are the same person .
      * @return  true if the speed date pair contains the same student e.g. Bob paird with Bob.
      *          false if above is not the case e.g. Bob paired with Tom.
@@ -51,7 +40,7 @@ public class SpeedDate {
      * @return  A user friendly representation of this class
      */
     public String toString(){
-        return this.pair[0] + " with " + this.pair[1];
+        return this.pair[0].getName() + " with " + this.pair[1].getName();
     }
 
     /**

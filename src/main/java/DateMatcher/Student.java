@@ -1,4 +1,4 @@
-package DateMactcher;
+package DateMatcher;
 
 /**
  * This class represents a Student Object which has a name.
