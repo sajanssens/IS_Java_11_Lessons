@@ -1,4 +1,4 @@
-package labs.h7;
+package labs.h7.person;
 
 public class PersonDiedException extends Exception {
 

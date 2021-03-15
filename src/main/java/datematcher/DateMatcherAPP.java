@@ -1,4 +1,4 @@
-package dateMatcher;
+package datematcher;
 
 public class DateMatcherAPP {
 

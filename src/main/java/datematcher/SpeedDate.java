@@ -1,4 +1,4 @@
-package dateMatcher;
+package datematcher;
 
 /**
  * This class represents a SpeedDate between two students

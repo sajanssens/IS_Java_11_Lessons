@@ -1,4 +1,4 @@
-package dateMatcher;
+package datematcher;
 
 import java.util.ArrayList;
 import java.util.List;

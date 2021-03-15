@@ -1,5 +1,7 @@
 package labs.h7;
 
+import labs.h7.person.Gender;
+import labs.h7.person.Person;
 import org.junit.Test;
 
 public class PersonTest {
