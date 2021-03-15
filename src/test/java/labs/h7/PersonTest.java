@@ -2,10 +2,10 @@ package labs.h7;
 
 import org.junit.Test;
 
-class PersonTest {
+public class PersonTest {
 
     @Test
-    void testPerson(){
+    public void testPerson(){
         Person p = new Person("Jan", 45);
         System.out.println(p.getGender());
         p.setGender(Gender.MALE);
