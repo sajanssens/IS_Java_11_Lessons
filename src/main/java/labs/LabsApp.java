@@ -1,4 +1,4 @@
-package Labs;
+package labs;
 
 public class LabsApp {
 }
