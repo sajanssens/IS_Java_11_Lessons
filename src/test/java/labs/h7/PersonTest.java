@@ -2,12 +2,13 @@ package labs.h7;
 
 import labs.h7.person.Gender;
 import labs.h7.person.Person;
+import labs.h7.person.PersonDiedException;
 import org.junit.Test;
 
 public class PersonTest {
 
     @Test
-    public void testPerson(){
+    public void testPerson() throws PersonDiedException {
         Person p = new Person("Jan", 45);
         System.out.println(p.getGender());
         p.setGender(Gender.MALE);
