@@ -13,6 +13,8 @@ public class elevenProofApp {
         accountNumber = Integer.parseInt(sc.nextLine());
 
         System.out.println("This is a" + isValid(accountNumber) + "account number" );
+
+        sc.close();
     }
 
     private static String isValid(int accountNumber){
