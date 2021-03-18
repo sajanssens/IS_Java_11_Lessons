@@ -13,8 +13,6 @@ public class elevenProofApp {
         accountNumber = Integer.parseInt(sc.nextLine());
 
         System.out.println("This is a" + isValid(accountNumber) + "account number" );
-
-
     }
 
     private static String isValid(int accountNumber){
@@ -34,6 +32,7 @@ public class elevenProofApp {
      * @return                  Sum of the digits of the passed number
      */
     private static int sumOfDigits(int accountNumber){
+
         int initSum = 0;
         return sumOfDigitsRecursion(accountNumber, initSum);
     }
