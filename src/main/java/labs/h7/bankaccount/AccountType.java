@@ -2,7 +2,7 @@ package labs.h7.bankaccount;
 
 public enum AccountType {
 
-    SAVINGS_ACCOUNT(1.03),
+    SAVINGS_ACCOUNT(1.03), // leuk gedaan
     REGULAR_ACCOUNT(1.01);
 
     private final double interestRate;

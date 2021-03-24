@@ -1,4 +1,4 @@
-package labs.h7.bankaccount.Exceptions;
+package labs.h7.bankaccount.Exceptions; // package met kleine letter
 
 public class BalanceException extends Exception {
 
@@ -6,5 +6,5 @@ public class BalanceException extends Exception {
         super(message);
     }
 
-
+    // denk om je witregels.... gebruik vaker Ctrl+Alt+L (reformat code)
 }

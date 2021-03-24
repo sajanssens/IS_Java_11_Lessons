@@ -18,7 +18,7 @@ public class Bank {
 
     public Bank(BigDecimal totalBankBalance, String bankName) {
         this.totalBankBalance = totalBankBalance;
-        initTotalBankAccountsBalance();
+        initTotalBankAccountsBalance(); // waarom zou je dit doen?
         this.allAccounts = new HashSet<>();
         this.bankName = bankName;
     }
@@ -27,6 +27,7 @@ public class Bank {
         return BANK_ABBREVIATION;
     }
 
+    // onnodige getters/setters verwijderen:
     public BigDecimal getTotalBankBalance() {
         return totalBankBalance;
     }
@@ -47,16 +48,16 @@ public class Bank {
         return bankName;
     }
 
-    public void addAccount(Account account){
+    public void addAccount(Account account) {
         this.allAccounts.add(account);
     }
 
     private void initTotalBankAccountsBalance() {
-
+        // volgens mij werkt deze niet: even een unittest maken?
         BigDecimal totalAccountsBalance = BigDecimal.ZERO;
 
-        allAccounts
-                .forEach(Account -> totalAccountsBalance.add(Account.getBalance()));
+        allAccounts // Account met kleine letter:
+                .forEach(Account -> totalAccountsBalance.add(Account.getBalance())); // Result of 'BigDecimal.add()' is ignored
 
         double sum = allAccounts.stream()
                 .map(Account::getBalance)
@@ -67,6 +68,6 @@ public class Bank {
     }
 
     public void subtractTotalBankBalance(BigDecimal interestToGrant) {
-        this.totalBankBalance.subtract(interestToGrant);
+        this.totalBankBalance.subtract(interestToGrant); // Result of 'BigDecimal.subtract()' is ignored !!!
     }
 }

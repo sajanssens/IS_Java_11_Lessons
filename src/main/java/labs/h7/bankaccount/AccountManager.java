@@ -4,7 +4,7 @@ import labs.h7.bankaccount.Exceptions.BalanceException;
 
 import java.math.BigDecimal;
 
-public class AccountManager {
+public class AccountManager { // Class 'AccountManager' is never used ?
 
     private Bank bank;
 

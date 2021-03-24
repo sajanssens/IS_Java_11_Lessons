@@ -16,6 +16,7 @@ public class Account {
         this.accountType = accountType;
     }
 
+    // BJ: geen onnodige getters/setters aanmaken
     public IBAN getAccountNumber() {
         return accountNumber;
     }
@@ -28,13 +29,13 @@ public class Account {
         return accountType;
     }
 
-    public BigDecimal calculateSingleYearInterest(){
+    public BigDecimal calculateSingleYearInterest() {// BJ: methodes niet met witregel beginnen:
 
         BigDecimal interestRate = new BigDecimal(this.accountType.getInterestRate());
         return balance.multiply(interestRate);
     }
 
-    public void receiveTransfer(BigDecimal amount){
+    public void receiveTransfer(BigDecimal amount) {
         this.balance.add(amount);
     }
 
@@ -42,22 +43,22 @@ public class Account {
 
         if (this.hasEnoughBalance(amount)) {
             this.balance.subtract(amount);
-        }
-        else throw new BalanceException( this.accountNumber.toString() + "does not have enough balance");
+        } else throw new BalanceException(this.accountNumber.toString() + "does not have enough balance");
 
     }
 
     /**
+     * BJ leuk om een keer gedaan te hebben, maar in dit geval voegt de javadoc weinig toe
      *
-     * @param amount    The minimal amount of currency this account should have
-     * @return          True if balance > amount
-     *                  False if balance < amount
+     * @param amount The minimal amount of currency this account should have
+     * @return True if balance > amount
+     * False if balance < amount
      */
-    public boolean hasEnoughBalance(BigDecimal amount){
+    public boolean hasEnoughBalance(BigDecimal amount) {
         return balance.compareTo(amount) > 0;
     }
 
-    public String toString(){
+    public String toString() {
 
         return accountType.toString() + " " + accountNumber.toString() + " balance: " + balance;
     }
